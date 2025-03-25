@@ -1,0 +1,134 @@
+type: collection.insomnia.rest/5.0
+name: api escola modificada
+meta:
+  id: wrk_1234567890abcdef1234567890abcdef
+  created: 1742511705517
+  modified: 1742511705517
+collection:
+  - url: http://127.0.0.1:8080/estudantes
+    name: Listar estudantes
+    meta:
+      id: req_abcd1234efgh5678ijkl9012mnop3456
+      created: 1742511712977
+      modified: 1742513819332
+      isPrivate: true
+      sortKey: -1742511712977
+    method: GET
+    headers:
+      - name: User-Agent
+        value: api-client/1.0.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: false
+      followRedirects: true
+      cookies:
+        send: false
+        store: false
+      rebuildPath: true
+  - url: http://127.0.0.1:8080/estudantes
+    name: Adicionar estudantes
+    meta:
+      id: req_5678mnop3456ijkl1234efghabcd9012
+      created: 1742513832999
+      modified: 1742514266804
+      isPrivate: true
+      sortKey: -1742210334495
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+          "student_id": "S011",
+          "cep": "54321-000",
+          "city": "Curitiba",
+          "address": "Av. Principal, 500",
+          "state": "PR",
+          "name": "Gabriel Souza",
+          "country": "Brasil",
+          "phone": "3030-2020"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: api-client/1.0.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: false
+      followRedirects: true
+      cookies:
+        send: false
+        store: false
+      rebuildPath: true
+  - url: http://127.0.0.1:8080/estudantes/S011
+    name: Alterar estudantes
+    meta:
+      id: req_9012mnop3456abcd1234ijkl5678efgh
+      created: 1742514253621
+      modified: 1742514311639
+      isPrivate: true
+      sortKey: -1742059645254
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+          "student_id": "S011",
+          "cep": "54321-000",
+          "city": "Curitiba",
+          "address": "Av. Principal, 500",
+          "state": "PR",
+          "name": "Gabriel Souza",
+          "country": "Argentina",
+          "phone": "3030-2020"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: api-client/1.0.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: false
+      followRedirects: true
+      cookies:
+        send: false
+        store: false
+      rebuildPath: true
+  - url: http://127.0.0.1:8080/estudantes/S011
+    name: Remover estudantes
+    meta:
+      id: req_3456ijkl5678mnop1234abcd9012efgh
+      created: 1742514324055
+      modified: 1742514338386
+      isPrivate: true
+      sortKey: -1741984300633.5
+    method: DELETE
+    body:
+      mimeType: application/json
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: api-client/1.0.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: false
+      followRedirects: true
+      cookies:
+        send: false
+        store: false
+      rebuildPath: true
+cookieJar:
+  name: Modified Jar
+  meta:
+    id: jar_abcdef1234567890abcdef1234567890
+    created: 1742511705525
+    modified: 1742511705525
+environments:
+  name: Modified Environment
+  meta:
+    id: env_1234567890abcdef1234567890abcdef
+    created: 1742511705522
+    modified: 1742511705522
+    isPrivate: true
